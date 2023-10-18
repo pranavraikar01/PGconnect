@@ -1,0 +1,36 @@
+.advertisement-list {
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.advertisement-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 400px;
+}
+
+.advertisement-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.advertisement-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.advertisement-card p {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Add additional styles as needed */

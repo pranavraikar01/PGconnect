@@ -1,0 +1,321 @@
+/* Navbar Container */
+.container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  z-index: 9999;
+  background-color: #60774b; /* Dark background color */
+  color: #9eb384; /* Red text color */
+  font-weight: bold;
+  padding: 0.5rem 0;
+  font-size: 30px;
+
+  /* Add a smooth transition for better aesthetics */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.container.scrolled {
+  background-color: #40542e; /* Dark background color */
+  box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.08);
+
+  /* Add a smooth transition for better aesthetics */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Navigation and Hamburger Icon */
+.navigation,
+.hamburgerIcon {
+  display: none;
+}
+
+/* Navbar Wrapper */
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Slightly reduced padding for better aesthetics */
+}
+
+/* Left Logo and Branding */
+.left {
+  text-decoration: none;
+  font-size: 28px; /* Slightly larger font size */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff; /* White text color */
+}
+
+/* Center Navigation Links */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap between items */
+  list-style: none;
+  font-size: 38px;
+}
+
+.center .listItem {
+  color: #ffffff;
+  transition: color 0.2s ease-in-out; /* Smoother color transition */
+}
+
+.center .listItem:hover {
+  color: #f70000; /* Red color on hover */
+}
+
+/* Right-side Buttons and Profile */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Increased gap between items */
+}
+
+.right a:first-child {
+  padding: 0.5rem 1.5rem; /* Larger padding for better clickability */
+  background-color: #f70000; /* Red button background */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 20px; /* Rounded corners for buttons */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Add smooth color and transform transition */
+  transform: scale(1); /* Initial size */
+}
+
+.right a:first-child:hover {
+  background-color: #5b5353; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.right a:nth-child(2) {
+  color: #f70000; /* Red color for the second button */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.right a {
+  text-decoration: none;
+}
+
+.right .list {
+  padding: 0.5rem 1rem; /* Larger padding for better clickability */
+  border-radius: 20px; /* Rounded corners for the list */
+  transition: background-color 0.3s; /* Add a smooth background color transition */
+  cursor: pointer;
+  position: relative;
+}
+
+.right .profileImg {
+  width: 38px; /* Slightly larger profile image */
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1.5rem; /* Increased margin for better spacing */
+}
+
+.right .logoutBtn {
+  cursor: pointer;
+  color: #333; /* Slightly darker color */
+  transition: color 0.3s ease-in-out; /* Smoother color transition */
+}
+
+.right .logoutBtn:hover {
+  color: #666; /* Darker color on hover */
+}
+
+/* ... Rest of the code remains the same ... */
+/* list property */
+.listPropertyForm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999999;
+}
+
+.listPropertyWrapper {
+  position: relative;
+  background-color: #cedebd;
+  height: 95vh;
+  width: 35vw;
+  border-radius: 20px;
+}
+
+.listPropertyWrapper > h2 {
+  text-align: center;
+  margin: 2.5rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.listPropertyWrapper > form > div > label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  margin-right: 1rem;
+}
+.listPropertyWrapper > form > input {
+  /* width: 30rem; */
+  width: 50%;
+  height: 3rem;
+  font-size: 25px;
+}
+.listPropertyWrapper > form > select {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  color: #222;
+  outline: none;
+  padding: 0.5rem 0.25rem;
+  width: 50%;
+  height: 3rem;
+  font-size: 25px;
+}
+
+.listPropertyWrapper button {
+  margin-top: 0.5rem;
+}
+
+.removeIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.error {
+  padding: 1rem;
+  background-color: #f00;
+  color: #fff;
+  position: absolute;
+  z-index: 9999999999;
+  right: 1rem;
+  top: 3rem;
+  border-radius: 8px;
+}
+
+/* user modal */
+.username {
+  cursor: pointer;
+}
+
+.userModal {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background-color: #efefef;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  top: 2.5rem;
+  right: 9rem;
+  border-radius: 20px;
+}
+
+.userModal > .myProperties {
+  cursor: pointer;
+}
+
+.userModalClose {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.yachtBtn {
+  background-color: #618264;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+}
+
+.myProfile {
+  color: inherit;
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px) {
+  .listPropertyWrapper {
+    height: 95vh;
+    width: 60vw;
+  }
+
+  .listPropertyWrapper button {
+    margin-top: 0;
+  }
+
+  .listPropertyWrapper > h2 {
+    margin: 1.75rem 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listPropertyWrapper {
+    position: absolute;
+    left: 18rem;
+  }
+
+  .wrapper {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    margin-left: 1rem;
+    font-size: 26px;
+  }
+
+  .center > input {
+    background-color: transparent;
+  }
+
+  .mobileCloseIcon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 24px;
+  }
+
+  .navigation {
+    width: 75%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .modal {
+    background-color: #fff;
+  }
+}
